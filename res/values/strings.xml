@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CofeakApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Flush</string>
+    <string name="hello_str">Bonjour, </string>
+    <string name="name_str">Jean-François Bedon</string>
+	<string name="scan">Scan</string>
+</resources>
