@@ -118,7 +118,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		//authentification
 		if( v.getId() == R.id.ok_auth_btn )
 		{
-			Toast.makeText(getApplicationContext(), "Authentification réussie", 
+			Toast.makeText(getApplicationContext(), "Authentification rÃ©ussie", 
 					   Toast.LENGTH_LONG).show();
 			
 			Editable usernameEdit = username_et.getText();
@@ -141,6 +141,16 @@ public class MainActivity extends Activity implements OnClickListener {
 			formatTxt.setText("FORMAT: " + scanFormat);
 			contentTxt.setText("CONTENT: " + scanContent);
 			
+			//TODO : instead of this, check if the embedded URL is one od these : 
+			/*http://cofeak.com/flash?token=5E657F3AAC8C2E349A4BC58914EF2&uid=341321
+			http://cofeak.com/flash?token=E1B5843EE79CEDAB3B528F634AFA1&uid=341321
+			http://cofeak.com/flash?token=C5425E3C2F5D15B11DD359987EAA9&uid=341321
+			http://cofeak.com/flash?token=56ABB6BF2931AE64A11B49B316A62&uid=341321
+			http://cofeak.com/flash?token=5E657F3AAC8C2E349A4BC58914EF2&uid=912306
+			http://cofeak.com/flash?token=E1B5843EE79CEDAB3B528F634AFA1&uid=912306
+			http://cofeak.com/flash?token=C5425E3C2F5D15B11DD359987EAA9&uid=912306
+			http://cofeak.com/flash?token=56ABB6BF2931AE64A11B49B316A62&uid=912306
+			*/
 			boolean isUrl = URLUtil.isValidUrl(scanContent);
 			//and a correct one
 			if( isUrl ) {
@@ -149,7 +159,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				startActivity(i);
 			}
 			else {
-				Util.alertDialog(this, "Le QR code scanné est incorrect", "Désolé");
+				Util.alertDialog(this, "Le QR code scannÃ© est incorrect", "DÃ©solÃ©");
 			}
 		}
 		else{
